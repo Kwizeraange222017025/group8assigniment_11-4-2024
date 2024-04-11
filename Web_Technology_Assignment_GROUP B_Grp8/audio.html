@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Audio Files </title>
+    <style type="text/css">
+        main {
+            color: skyblue;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        main section {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: flex-start;
+        }
+
+        main audio {
+            margin-bottom: 20px; /* Add some space between videos */
+        }
+
+        main section:first-child audio {
+            align-self: flex-start; /* Align first video to the left */
+        }
+    </style>
+
+</head>
+<body>
+<header style="font-family: 'Arial Rounded MT Bold'; font-size: 22px;">
+    
+        <div style="display: flex; flex: 1;">
+            <div>
+                <a href="audio.html">Home</a>
+                <a href="about .html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="parameter.html">Parameter</a>
+            </div>
+        </div>
+    </div>
+</header>
+<hr>
+<main>
+    
+                        <!-- Repeat similar structure for other audio sections -->
+     <a href="video.html">Back to Videos Page</a>
+     <br><br><br>
+        <section>
+            <audio controls>
+                <source src="./music/audio1.opus" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+            <caption>Seraphine's Singing </caption>
+            <br>
+            <button onclick="previousAudio()">Previous</button>
+            <button onclick="togglePlayPause()">Play/Pause</button>
+            <button onclick="nextAudio()">Next</button>
+            <div>
+                
+            </div>
+
+            </section>
+
+            <section>
+        
+            <audio controls>
+            <source src="./music/audio2.opus" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+        <caption>Sibo's song </caption><br><br><br>
+        
+
+    <audio controls>
+            <source src="./music/audio3.opus" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+        <caption>Vincent's song</caption><br><br><br>
+        
+   
+
+    <audio controls>
+            <source src="./music/audio1.opus" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+        <caption>Mahadi's song</caption><br><br><br>
+   
+       
+    </section>
+
+        
+
+   
+
+        </section>
+
+
+    
+</main>
+<hr>
+<footer>
+  
+</footer>
+
+<script>
+    var audios = [
+    "./music/Shira Iyo Ntimba ya Kamaliza   Lyrics  Karahanyuze Nyarwanda.m4a",
+    "./music/Mbilia Bel - Nakei Naïrobi ( El Alambre ) [Clip Officiel].m4a",
+    "./music/Tshala Muana- Karibu Yangu.m4a",
+    "./music/URUKUNDO BY GABRIEL KABENGERA.m4a",
+       
+    ];
+    var currentAudioIndex = 0;
+    var audioPlayer = document.querySelector('audio');
+
+    function togglePlayPause() {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+        } else {
+            audioPlayer.pause();
+        }
+    }
+
+    function nextAudio() {
+        currentAudioIndex = (currentAudioIndex + 1) % audios.length;
+        audioPlayer.src = audios[currentAudioIndex];
+        audioPlayer.play();
+    }
+
+    function previousAudio() {
+        currentAudioIndex = (currentAudioIndex - 1 + audios.length) % audios.length;
+        audioPlayer.src = audios[currentAudioIndex];
+        audioPlayer.play();
+    }
+</script>
+
+</body>
+</html>

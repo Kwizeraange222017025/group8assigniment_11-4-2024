@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Files </title>
+    <style type="text/css">
+        main {
+            color:skyblue;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        main section {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: flex-start;
+        }
+
+        main video {
+            margin-bottom: 20px; /* Add some space between videos */
+        }
+
+        main section:first-child video {
+            align-self: flex-start; /* Align first video to the left */
+        }
+    </style>
+</head>
+<body>
+<header style="font-family: 'Arial Rounded MT Bold'; font-size: 22px;">
+    
+        <div style="display: flex; flex: 1;">
+            <div>
+                <a href="video.html">Home</a>
+                <a href="about .html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="parameter.html">Parameter</a>
+                <hr>
+                
+            </div>
+        </div>
+    </div>
+</header>
+<hr>
+<main>
+    <a href="audio.html">Back to Audios Page</a>
+    <br>
+    <br><br>
+    <section>
+       
+        <video width="600" height="420" controls>
+            <source src="./videos/jugumila.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <caption>IJUGU JUGU</caption><br>
+        <button onclick="previousVideo()">Previous</button>
+        <button onclick="togglePlayPause()">Play/Pause</button>
+        <button onclick="nextVideo()">Next</button>
+        <div>
+            
+        </div>
+    </section>
+
+    <section>
+        <video width="400" height="220" controls>
+            <source src="./videos/jugumila.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <caption>Jugumila</caption><br><br><br>
+        
+        
+        <video width="400" height="220" controls>
+            <source src="./videos/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <caption>Choir</caption><br><br><br>
+    
+
+        <video width="400" height="220" controls>
+            <source src="./videos/gumamo.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <caption>Gumamo</caption><br><br><br>
+        
+
+        <video width="400" height="220" controls>
+            <source src="./videos/munda.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <caption>Munda</caption><br><br><br>
+        
+      
+        
+    </section>
+</main>
+<hr>
+<footer>
+    <center>UR CBE B BIT &copy; 2024; This website displays videos</center>
+</footer>
+
+<script>
+    var videos = [
+    "./videos/jugumila.mp4",
+    "./videos/video1.mp4",
+    "./videos/gumamo.mp4",
+    "./videos/munda.mp4",
+    
+];
+    
+    var currentVideoIndex = 0;
+    var videoPlayer = document.querySelector('video');
+
+    function togglePlayPause() {
+        if (videoPlayer.paused) {
+            videoPlayer.play();
+        } else {
+            videoPlayer.pause();
+        }
+    }
+
+    function nextVideo() {
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        videoPlayer.src = videos[currentVideoIndex];
+        videoPlayer.play();
+    }
+
+    function previousVideo() {
+        currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+        videoPlayer.src = videos[currentVideoIndex];
+        videoPlayer.play();
+    }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Files </title>
+    <style type="text/css">
+        main {
+            color:skyblue;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        main section {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: flex-start;
+        }
+
+        main video {
+            margin-bottom: 20px; /* Add some space between videos */
+        }
+
+        main section:first-child video {
+            align-self: flex-start; /* Align first video to the left */
+        }
+    </style>
+</head>
+<body>
+<header style="font-family: 'Arial Rounded MT Bold'; font-size: 22px;">
+    
+        <div style="display: flex; flex: 1;">
+            <div>
+                <a href="video.html">Home</a>
+                <a href="about .html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="parameter.html">Parameter</a>
+                <hr>
+                
+            </div>
+        </div>
+    </div>
+</header>
+<hr>
+<main>
+    <a href="audio.html">Back to Audios Page</a>
+    <br>
+    <br><br>
+    <section>
+       
+        <video width="600" height="420" controls>
+            <source src="./videos/jugumila.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <caption>IJUGU JUGU</caption><br>
+        <button onclick="previousVideo()">Previous</button>
+        <button onclick="togglePlayPause()">Play/Pause</button>
+        <button onclick="nextVideo()">Next</button>
+        <div>
+            
+        </div>
+    </section>
+
+    <section>
+        <video width="400" height="220" controls>
+            <source src="./videos/jugumila.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <caption>Jugumila</caption><br><br><br>
+        
+        
+        <video width="400" height="220" controls>
+            <source src="./videos/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <caption>Choir</caption><br><br><br>
+    
+
+        <video width="400" height="220" controls>
+            <source src="./videos/gumamo.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <caption>Gumamo</caption><br><br><br>
+        
+
+        <video width="400" height="220" controls>
+            <source src="./videos/munda.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <caption>Munda</caption><br><br><br>
+        
+      
+        
+    </section>
+</main>
+<hr>
+<footer>
+    <center>UR CBE B BIT &copy; 2024; This website displays videos</center>
+</footer>
+
+<script>
+    var videos = [
+    "./videos/jugumila.mp4",
+    "./videos/video1.mp4",
+    "./videos/gumamo.mp4",
+    "./videos/munda.mp4",
+    
+];
+    
+    var currentVideoIndex = 0;
+    var videoPlayer = document.querySelector('video');
+
+    function togglePlayPause() {
+        if (videoPlayer.paused) {
+            videoPlayer.play();
+        } else {
+            videoPlayer.pause();
+        }
+    }
+
+    function nextVideo() {
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        videoPlayer.src = videos[currentVideoIndex];
+        videoPlayer.play();
+    }
+
+    function previousVideo() {
+        currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+        videoPlayer.src = videos[currentVideoIndex];
+        videoPlayer.play();
+    }
+</script>
+
+</body>
+</html>
